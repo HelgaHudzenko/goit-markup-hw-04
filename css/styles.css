@@ -17,7 +17,6 @@
 	--button-bg-cl: #2196f3;
 }
 
-
 *,
 *::after,
 *::before {
@@ -106,7 +105,6 @@ textarea {
 	margin: 0 auto;
 }
 
-
 /* body */
 body {
 	background-color: var(--main-bg-cl);
@@ -129,7 +127,6 @@ body {
 	display: flex;
 	align-items: center;
 }
-
 
 .header__inner {
 	display: flex;
@@ -191,8 +188,20 @@ nav:active {
 .site-nav,
 .header-contacts {
 	display: flex;
+	align-items: center;
 }
 
+.header-contacts li a{
+	margin-left: 10px;
+	display: flex;
+    align-items: center;
+}
+.header-contacts li a:hover{
+	fill: #2196f3;
+}
+.header-contacts li a svg{
+	margin-right: 10px;
+}
 .site-nav .is-active {
 	color: var(--accent-txt-cl);
 }
@@ -217,8 +226,31 @@ nav:active {
 .hero {
 	padding: 200px;
 	background-color: var(--secondary-bg-cl);
+	background-image: url(../images/main-bg.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    margin: 0 auto;
+	background-color: rgba(47, 48, 58, 0.4);
+	max-width: 1600px;
+    background-size: cover;
+    position: relative;
+	z-index: 10;
 }
 
+.hero:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(47, 48, 58, 0.4);
+	z-index: -1;
+}
+.hero__inner{
+	position: relative;
+}
 .hero-title {
 	display: block;
 	margin: 0 auto 30px;
@@ -226,7 +258,6 @@ nav:active {
 	font-weight: 900;
 	font-size: 44px;
 	line-height: calc(60/44);
-
 	text-align: center;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
@@ -265,7 +296,16 @@ nav:active {
 .feature-list-title {
 	margin-bottom: 10px;
 }
-
+.about__icon-overlay{
+	width: 270px;
+	height: 120px;
+	background: #F5F4FA;
+	border-radius: 4px;
+	margin-bottom: 30px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .what {
 	padding-bottom: 94px;
 }
@@ -297,7 +337,6 @@ nav:active {
 	line-height: calc(42/36);
 	text-align: center;
 	letter-spacing: 0.03em;
-
 	color: var(--second-txt-cl);
 }
 
@@ -336,6 +375,7 @@ nav:active {
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--main-txt-cl);
+	margin-bottom: 16px;
 }
 
 .team {
@@ -366,6 +406,65 @@ nav:active {
 .team-card-title {
 	margin-bottom: 10px;
 }
+.team__soc-row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+	gap: 10px;
+	justify-items: center;
+	padding: 0px 32px;
+}
+.team__soc-row li{
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team__soc-row li svg{
+	fill: #AFB1B8;	
+	transition: all 0.2s linear;
+}
+.team__soc-row li:hover{
+	background: #2196F3;
+	fill: #FFFFFF;	
+	transition: all 0.2s linear;
+}
+.team__soc-row li:hover svg{
+	fill: #FFFFFF;
+	transition: all 0.2s linear;	
+}
+
+/* clients  */
+
+.clients {
+	padding: 94px 0;
+}
+.clients__item {
+	border: 1px solid #AFB1B8;
+	border-radius: 4px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	min-height: 92px;
+	fill: #AFB1B8;
+	transition: all 0.2s linear;
+}
+.clients__item:hover {
+	border: 1px solid #2196F3;
+	fill: #2196F3!important;
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+
+.clients__list{
+	display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+}
+
 
 /* buttons */
 .btn {
@@ -406,7 +505,9 @@ nav:active {
 }
 
 /* footer */
-
+.footer__row{
+	display: flex;
+}
 .footer {
 	padding: 60px;
 	background-color: var(--secondary-bg-cl);
@@ -439,7 +540,9 @@ nav:active {
 	color: var(--light-txt-cl);
 	text-decoration: none;
 }
-
+.footer__inner{
+	margin-right: 70px;
+}
 .footer-contacts .cont {
 	font-style: normal;
 	font-size: 14px;
@@ -448,6 +551,47 @@ nav:active {
 	color: var(--black-opacity-txt-cl);
 	text-decoration: none;
 }
+.footer__soc-row{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+	gap: 10px;
+	margin-top: 20px;
+}
+.footer__soc-row li{
+	
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	background: rgba(255, 255, 255, 0.1);
+}
+.footer__inner-soc p{
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	padding-top: 12px;
+}
+.footer__soc-row li svg{
+	fill: #AFB1B8;	
+	transition: all 0.2s linear;
+}
+
+.footer__soc-row li:hover{
+	background: #2196F3;
+	fill: #FFFFFF;	
+	transition: all 0.2s linear;
+}
+.footer__soc-row li:hover svg{
+	fill: #FFFFFF;
+	transition: all 0.2s linear;	
+}
+
 
 .footer-contacts .cont:hover,
 .footer-contacts .cont:focus,
@@ -479,11 +623,19 @@ nav:active {
 .buttons li button:hover {
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.buttons li button:focus {
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 
 .shop__list {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 30px;
+}
+
+.shop__list li:hover{
+	box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%), 1px 4px 6px rgb(0 0 0 / 16%);
 }
 
 .shop__box {
