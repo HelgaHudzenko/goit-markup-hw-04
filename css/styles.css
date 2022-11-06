@@ -103,6 +103,8 @@ textarea {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 /* body */
@@ -395,18 +397,13 @@ textarea {
 }
 
 
-
-
-
-
 .about {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
 
 .feature-list {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	display: flex;
 	gap: 30px;
 }
 
@@ -416,7 +413,6 @@ textarea {
 }
 
 .about__icon-overlay {
-	width: 270px;
 	height: 120px;
 	background: #F5F4FA;
 	border-radius: 4px;
@@ -435,14 +431,12 @@ textarea {
 }
 
 .what__list {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
 	gap: 30px;
 }
 
 .what__list li img {
 	display: block;
-	border: 0;
 }
 
 /* section  */
@@ -533,9 +527,8 @@ textarea {
 
 .team__soc-row {
 	display: flex;
-	justify-content: space-around;
-	justify-items: center;
-	padding: 0px 32px;
+	gap: 10px;
+	justify-content: center;
 }
 
 .team__soc-row li {
@@ -593,10 +586,12 @@ textarea {
 }
 
 .clients__list {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: auto;
+	display: flex;
+	flex-grow: 1;
+	aside.sidebar: 170px;
+	justify-content: center;
 	gap: 30px;
+
 }
 
 
@@ -607,7 +602,6 @@ textarea {
 	line-height: calc(26/16);
 	text-align: center;
 	letter-spacing: 0.03em;
-
 	cursor: pointer;
 }
 
@@ -641,6 +635,7 @@ textarea {
 /* footer */
 .footer__row {
 	display: flex;
+	align-items: baseline;
 }
 
 .footer {
@@ -716,7 +711,6 @@ textarea {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: #FFFFFF;
-	padding-top: 12px;
 }
 
 .footer__soc-row li svg {
@@ -774,8 +768,12 @@ textarea {
 
 
 .shop__list {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap;
+	justify-content: center; 
+	align-content: space-between;  
+	align-items: center;
 	gap: 30px;
 }
 
