@@ -585,10 +585,17 @@ textarea {
 	cursor: pointer;
 }
 
+.clients__item {
+	height: 92px;
+  	width: 170px;
+}
 .clients__list {
 	display: flex;
-	flex-grow: 1;
-	aside.sidebar: 170px;
+	flex-direction: row;
+  	height: 100%;
+  	width: 100%;
+    object-fit: fill;
+	align-content: space-between;
 	justify-content: center;
 	gap: 30px;
 
