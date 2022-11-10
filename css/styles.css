@@ -189,17 +189,23 @@ nav:active {
 	height: 16px;
 	align-items: center;
 }
-.icon-header:hover {
-	fill: #2196f3
+.link {
+    color: grey;
 }
-
-.header-contacts:hover {
-	color:var(--main-txt-cl)
-}
-
 .link:hover
 .link:focus{
-	color: var(--accent-txt-cl);
+    color: var(--accent-txt-cl);
+}
+.icon-header {
+    display: flex;
+    fill: currentColor;
+    height: 16px;
+    align-items: center;
+}
+
+.icon-team:hover
+.icon-team:focus {
+	fill:#EEEEEE
 }
 
 /* help class to remove dots in ul */
