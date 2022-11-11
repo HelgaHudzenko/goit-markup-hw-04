@@ -509,6 +509,7 @@ textarea {
 	justify-content: space-between;
 	align-items: center;
 	max-width: 1170px;
+	height: 368px;
 	margin: 0 auto;
 }
 
@@ -528,6 +529,7 @@ textarea {
 	letter-spacing: 0.03em;
 	color: var(--main-txt-cl);
 	margin-bottom: 16px;
+	
 }
 
 .team {
@@ -550,6 +552,7 @@ textarea {
 
 .team__item img {
 	padding-bottom: 30px;
+
 }
 
 .team-card-title {
@@ -560,9 +563,10 @@ textarea {
 	display: flex;
 	gap: 10px;
 	justify-content: center;
+	
 }
 
-.team__soc-row li {
+.team__soc-row li a {
 	width: 44px;
 	height: 44px;
 	border-radius: 100%;
@@ -571,25 +575,25 @@ textarea {
 	justify-content: center;
 }
 
-.team__soc-row li svg {
+.team__soc-row li a svg {
 	fill: #AFB1B8;
 	transition: all 0.2s linear;
 }
 
-.team__soc-row li:hover {
+.team__soc-row li a:hover {
 	background: #2196F3;
 	fill: #FFFFFF;
 	transition: all 0.2s linear;
 }
 
-.team__soc-row li:hover svg {
+.team__soc-row li a:hover svg {
 	fill: #FFFFFF;
 	transition: all 0.2s linear;
 }
 
 .team-inform {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
 /* clients  */
@@ -731,7 +735,7 @@ textarea {
 	margin-top: 20px;
 }
 
-.footer__soc-row li {
+.footer__soc-row li a {
 
 	width: 44px;
 	height: 44px;
@@ -756,13 +760,13 @@ textarea {
 	transition: all 0.2s linear;
 }
 
-.footer__soc-row li:hover {
+.footer__soc-row li a:hover {
 	background: #2196F3;
 	fill: #FFFFFF;
 	transition: all 0.2s linear;
 }
 
-.footer__soc-row li:hover svg {
+.footer__soc-row li a:hover svg {
 	fill: #FFFFFF;
 	transition: all 0.2s linear;
 }
@@ -815,9 +819,10 @@ textarea {
 	gap: 30px;
 }
 
-.shop__list li:hover {
+.shop__list li a:hover {
 	box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%), 1px 4px 6px rgb(0 0 0 / 16%);
 }
+
 
 .shop__box {
 	padding: 24px;
@@ -825,7 +830,7 @@ textarea {
 	border-top: 0px;
 }
 
-.shop__list li img {
+.shop__list li a img {
 	display: block;
 	width: 100%;
 }
